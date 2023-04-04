@@ -16,3 +16,5 @@
 # Explicit blacklist
 obj
 bin
+
+.vs

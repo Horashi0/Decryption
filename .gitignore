@@ -1,0 +1,18 @@
+# Enable whitelisting mode (ignore all with *, do not ignore directories with !*/)
+*
+!*/
+
+# Allow repo files
+!.gitignore
+!.editorconfig
+
+# Allow project files
+!*.sln
+!*.csproj
+
+# Allow source files
+!*.cs
+
+# Explicit blacklist
+obj
+bin

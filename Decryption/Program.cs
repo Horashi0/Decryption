@@ -11,20 +11,29 @@ namespace code
             string prime = "------------------- Prime Numbers -------------------";
             Console.SetCursorPosition((Console.WindowWidth - prime.Length) / 2, Console.CursorTop);
             Console.WriteLine(prime);
+            using (var sr = new StreamReader("A:/Visual Studio 2022/C#/Decryption/Decryption/prime.txt"))
+            {
+                Console.WriteLine(sr.ReadToEnd());
+            }
             Console.WriteLine("");
-            Console.WriteLine("Please enter a key: ");
-            string key = Console.ReadLine();
-            double keyInt = Convert.ToDouble(key);
+            Console.WriteLine("Please enter a first prime number: ");
+            string prime_1 = Console.ReadLine();
+            Console.WriteLine("Please enter a second prime number: ");
+            string prime_2 = Console.ReadLine();
+            double prime_1_double = Convert.ToDouble(prime_1);
+            double prime_2_double = Convert.ToDouble(prime_2);
+            double key = prime_1_double * prime_2_double;
+            Console.WriteLine($"Your private key is: {prime_1_double} x {prime_2_double}\nYour public key is: {key}");
             double guess = 1;
             while (true)
             {
-                if ((keyInt / guess) % 1 == 0 && guess < keyInt)
+                if ((key / guess) % 1 == 0 && guess < key)
                 {
                     guess = guess + 1;
                     Console.WriteLine($"guess: {guess}");
                     
                 }
-                if ((keyInt / guess) % 1 != 0)
+                if ((key / guess) % 1 != 0)
                 {
                     Console.WriteLine(guess);
                     break;

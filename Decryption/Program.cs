@@ -24,25 +24,42 @@ namespace code
             double prime_2_double = Convert.ToDouble(prime_2);
             double key = prime_1_double * prime_2_double;
             Console.WriteLine($"Your private key is: {prime_1_double} x {prime_2_double}\nYour public key is: {key}");
-            double guess = 1;
+            double guess = 8;
             while (true)
             {
                 if ((key / guess) % 1 == 0 && guess < key)
                 {
-                    guess = guess + 1;
-                    Console.WriteLine($"guess: {guess}");
-                    
+                    guess = guess + 1;                  
                 }
                 if ((key / guess) % 1 != 0)
                 {
-                    Console.WriteLine(guess);
+                    Console.WriteLine($"Guess: {guess}");
                     break;
                 }
             }
+            Console.WriteLine($"|  g^x  |  Result  |  g^x / {key}  |  Remainder  |");
+            double x = 1;
+            while (true)
+            {
+                int Intkey = Convert.ToInt32(key);
+                int intGuess = Convert.ToInt32(guess);
+                double doubleDividend = Math.Pow(guess, x);
+                int dividend = Convert.ToInt32(doubleDividend);
+                Console.WriteLine($"x: {x}");
+                x++;                
+                int quotient = dividend / Intkey;
+                int remainder = dividend % Intkey;
+                Console.WriteLine($"Result: {dividend}");
+                Console.WriteLine($"Divider: {quotient}"); 
+                Console.WriteLine($"Remainder: {remainder}");
+                
+                if (remainder == 1)
+                {
+                    break;
+                }
+            }
+
         }
-        void exponent(double guess)
-        {
-            Console.WriteLine(guess);
-        }
+        
     }
 }

@@ -24,7 +24,7 @@ namespace code
             double prime_2_double = Convert.ToDouble(prime_2);
             double key = prime_1_double * prime_2_double;
             Console.WriteLine($"Your private key is: {prime_1_double} x {prime_2_double}\nYour public key is: {key}");
-            double guess = 8;
+            double guess = 1;
             while (true)
             {
                 if ((key / guess) % 1 == 0 && guess < key)

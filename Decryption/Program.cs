@@ -11,7 +11,7 @@ namespace code
             string prime = "------------------- Prime Numbers -------------------";
             Console.SetCursorPosition((Console.WindowWidth - prime.Length) / 2, Console.CursorTop);
             Console.WriteLine(prime);
-            using (var sr = new StreamReader("A:/Visual Studio 2022/C#/Decryption/Decryption/prime.txt"))
+            using (var sr = new StreamReader("C:/Users/harry/source/repos/Decryption/Decryption/PrimeNumbers.txt"))
             {
                 Console.WriteLine(sr.ReadToEnd());
             }
@@ -46,7 +46,7 @@ namespace code
                 double doubleDividend = Math.Pow(guess, x);
                 int dividend = Convert.ToInt32(doubleDividend);
                 Console.WriteLine($"x: {x}");
-                x++;                
+                x++;
                 int quotient = dividend / Intkey;
                 int remainder = dividend % Intkey;
                 Console.WriteLine($"Result: {dividend}");

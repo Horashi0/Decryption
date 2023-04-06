@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "A:\\Visual Studio 2022\\C#\\Decryption\\Decryption\\Decryption.csproj": {}
+    "C:\\Users\\harry\\source\\repos\\Decryption\\Decryption\\Decryption.csproj": {}
   },
   "projects": {
-    "A:\\Visual Studio 2022\\C#\\Decryption\\Decryption\\Decryption.csproj": {
+    "C:\\Users\\harry\\source\\repos\\Decryption\\Decryption\\Decryption.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "A:\\Visual Studio 2022\\C#\\Decryption\\Decryption\\Decryption.csproj",
+        "projectUniqueName": "C:\\Users\\harry\\source\\repos\\Decryption\\Decryption\\Decryption.csproj",
         "projectName": "Decryption",
-        "projectPath": "A:\\Visual Studio 2022\\C#\\Decryption\\Decryption\\Decryption.csproj",
+        "projectPath": "C:\\Users\\harry\\source\\repos\\Decryption\\Decryption\\Decryption.csproj",
         "packagesPath": "C:\\Users\\harry\\.nuget\\packages\\",
-        "outputPath": "A:\\Visual Studio 2022\\C#\\Decryption\\Decryption\\obj\\",
+        "outputPath": "C:\\Users\\harry\\source\\repos\\Decryption\\Decryption\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "A:\\Visual Studio 2022\\Visual Studio SDK\\NuGetPackages"
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "D:\\Users\\harry\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\harry\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -26,6 +26,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -59,7 +60,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.401\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.201\\RuntimeIdentifierGraph.json"
         }
       }
     }

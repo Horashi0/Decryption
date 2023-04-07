@@ -38,6 +38,7 @@ namespace code
                     break;
                 }
             }
+            // Mathematics part
             double x = 1;
             var table = new ConsoleTable($"g^x", $"Result", $"g^x / {key}", $"Remainder");
             while (true)
@@ -56,8 +57,33 @@ namespace code
                 x++;
             }
             table.Write();
-            
+            Console.WriteLine($"Exponent: {x}");
+            double calculatation_quotient = Math.Pow(guess, x / 2) + 1;
+            // euclids algorithm
+            int intkey = Convert.ToInt32(key);
+            int calculation_quotient_int = Convert.ToInt32(calculatation_quotient);
+            int numerator = calculation_quotient_int;
+            int denominator = intkey;
+            var table_euclid = new ConsoleTable($"Numerator", $"Denominator", $"Result", $"Remainder");
+            while (true)
+            {
+                int remainder_euclid = numerator % denominator;
+                int devide_euclid = numerator / denominator;
+                Console.WriteLine(numerator);
+                Console.WriteLine(denominator);
+                Console.WriteLine(devide_euclid);
+                table_euclid.AddRow($"{numerator}", $"{denominator}", $"{devide_euclid}", $"{remainder_euclid}");
+                numerator = denominator;
+                denominator = remainder_euclid;
+                
+                if (remainder_euclid == 0)
+                {
+                    Console.WriteLine(denominator);
+                    break;
+                }
+            }
+            table_euclid.Write();
+            Console.WriteLine($"The private key is: {numerator} x " + key / numerator);
         }
-        
     }
 }

@@ -2,6 +2,7 @@
 Hello this is my decryption project. It is mainly for educational purposes in which it shows the basics of decrypting a asymetric encryption key 
  */
 using System;
+using ConsoleTables;
 namespace code
 {
     public class Program
@@ -37,28 +38,25 @@ namespace code
                     break;
                 }
             }
-            Console.WriteLine($"|  g^x  |  Result  |  g^x / {key}  |  Remainder  |");
             double x = 1;
+            var table = new ConsoleTable($"g^x", $"Result", $"g^x / {key}", $"Remainder");
             while (true)
             {
                 int Intkey = Convert.ToInt32(key);
                 int intGuess = Convert.ToInt32(guess);
                 double doubleDividend = Math.Pow(guess, x);
                 int dividend = Convert.ToInt32(doubleDividend);
-                Console.WriteLine($"x: {x}");
-                x++;
                 int quotient = dividend / Intkey;
-                int remainder = dividend % Intkey;
-                Console.WriteLine($"Result: {dividend}");
-                Console.WriteLine($"Divider: {quotient}"); 
-                Console.WriteLine($"Remainder: {remainder}");
-                
+                int remainder = dividend % Intkey;                
+                table.AddRow($"{guess}^{x}", $"{dividend}", $"{quotient}", $"{remainder}");                
                 if (remainder == 1)
                 {
                     break;
                 }
+                x++;
             }
-
+            table.Write();
+            
         }
         
     }

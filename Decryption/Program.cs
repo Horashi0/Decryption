@@ -3,6 +3,7 @@ Hello this is my decryption project. It is mainly for educational purposes in wh
  */
 using System;
 using ConsoleTables;
+using MathyInt = System.Int64;
 namespace code
 {
     public class Program
@@ -44,7 +45,6 @@ namespace code
             while (true)
             {
                 int Intkey = Convert.ToInt32(key);
-                int intGuess = Convert.ToInt32(guess);
                 double doubleDividend = Math.Pow(guess, x);
                 int dividend = Convert.ToInt32(doubleDividend);
                 int quotient = dividend / Intkey;
@@ -69,9 +69,6 @@ namespace code
             {
                 int remainder_euclid = numerator % denominator;
                 int devide_euclid = numerator / denominator;
-                Console.WriteLine(numerator);
-                Console.WriteLine(denominator);
-                Console.WriteLine(devide_euclid);
                 table_euclid.AddRow($"{numerator}", $"{denominator}", $"{devide_euclid}", $"{remainder_euclid}");
                 numerator = denominator;
                 denominator = remainder_euclid;

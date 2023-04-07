@@ -13,6 +13,7 @@
 # Allow source files
 !*.cs
 !*.txt
+!*.md
 # Explicit blacklist
 obj
 bin
